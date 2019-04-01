@@ -2,8 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Chrome App Creator - International Version</title>
+		<title>App Creator - International Version</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Shameem Reza">
 		<link rel="stylesheet" href="icons/styles.css">
 		<link rel="stylesheet" href="css/bootstrap-custom.css">
 		<link rel="stylesheet" href="css/demo.css">
