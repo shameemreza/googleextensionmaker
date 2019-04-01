@@ -1,5 +1,5 @@
 <?php
-/* Get Zip Output */
+/* Get App Output */
 function ZipStatusString( $status )
 {
     switch( (int) $status )
@@ -114,7 +114,7 @@ $data.="\r\n".' "app": {
 							$return['msg'] = '<div class="fcorn-shortcodes ">
 									<div class="col-md-12 col-sm-12 notify">
 										<div class="success">
-											<span class="entypo-thumbs-up msg">Your Google Chrome App has been created. Name of the zip file : <a href="./output/'.$filename.'">'.$filename.' </a>(click on the link or open the Output folder)</span>										
+											<span class="entypo-thumbs-up msg">Your Chrome App has been created. Name of the zip file : <a href="./output/'.$filename.'">'.$filename.' </a>(click on the link or open the Output folder)</span>										
 										</div>
 									</div>		
 								</div>';
