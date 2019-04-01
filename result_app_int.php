@@ -1,5 +1,5 @@
 <?php
-/* Generate International Version */
+/* Generate App International Version */
 function unescape($text) 
 { 
   if(get_magic_quotes_gpc()) 
@@ -14,7 +14,7 @@ class ajaxValidate {
 	function formValidate() {
 	$return = array();
 	$return['msg'] = '';	
-			/* GET VARIABLE FROM THE FORM */
+			/* Get variable from the form */
 			$default_locale=unescape($_POST['default_locale']);
 			$version=trim($_POST['version']);
 			$url=trim($_POST['url']);
@@ -105,7 +105,7 @@ $data='{
 					$return['msg'] = '<div class="fcorn-shortcodes ">
 									<div class="col-md-12 col-sm-12 notify">
 										<div class="success">
-											<span class="entypo-thumbs-up msg">Your Google Chrome App has been created. Name of the zip file : <a href="./'.$dirbase.'">'.$dirbase.' </a>(click on the link or open the Output folder)</span>										
+											<span class="entypo-thumbs-up msg">Your Chrome App has been created. Name of the zip file : <a href="./'.$dirbase.'">'.$dirbase.' </a>(click on the link or open the Output folder)</span>										
 										</div>
 									</div>		
 								</div>';
