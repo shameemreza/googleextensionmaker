@@ -7,7 +7,7 @@
 		<meta name="author" content="Shameem Reza">
 		<link rel="stylesheet" href="icons/styles.css">
 		<link rel="stylesheet" href="css/bootstrap-custom.css">
-		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/contact-form.css">	
 		<link rel="stylesheet" href="css/shortcodes.css">		
 		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
