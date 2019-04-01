@@ -1,0 +1,81 @@
+/**
+ * Sidebar
+ * --------------------------------------
+ */
+body {
+  font-family: "Source Sans Pro";
+  background: #fafafa;
+}
+.sidebar {
+  width: 250px;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fdfdfd;
+  box-shadow: 0 2px 2px #b4b4b4;
+
+  
+    /**
+   * Header Style
+   * --------------------------------------
+   */
+}
+.sidebar header {
+  background: #4cbeed;
+  color: #fff;
+  padding: 45px 45px;
+}
+.sidebar header h1 {
+  margin: 0;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+.sidebar header span {
+  display: block;
+  text-indent: 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+  /**
+   * Menu Style
+   * --------------------------------------
+   */
+.sidebar ul.main-nav {
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar ul.main-nav > li {
+  border-bottom: 1px solid #f7f7f7;
+}
+.sidebar ul.main-nav > li:last-child {
+  border-bottom: none;
+}
+.sidebar ul.main-nav > li > a {
+  padding: 15px 30px;
+  color: #888888;
+  display: block;
+  letter-spacing: 1px;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  font-weight: normal;
+}
+.sidebar ul.main-nav > li > a:hover,
+.sidebar ul.main-nav > li > a:active,
+.sidebar ul.main-nav > li > a:focus {
+  text-decoration: none;
+  outline: none;
+}
+.sidebar ul.main-nav > li > a:hover , .sidebar ul.main-nav .active{
+  background: #f7f7f7;
+}
+/** For positioning (demo) **/
+.form-wrapper {
+  margin-left: 250px;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+

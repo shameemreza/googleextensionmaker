@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Google Extension Creator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="icons/styles.css">
+		<link rel="stylesheet" href="css/bootstrap-custom.css">
+		<link rel="stylesheet" href="css/demo.css">
+		<link rel="stylesheet" href="css/contact-form.css">	
+		<link rel="stylesheet" href="css/shortcodes.css">		
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>	
+	</head>
+	<body >
+		<!-- Chrome Extension Creator Form -->
+		<div class="fcorn-shortcodes" > 
+			<form method="post" class="fcorn-contact container" id="form1" onsubmit="return submitForm();" >
+				<div class="col-md-5 col-sm-5 contact-left">
+					<h3 class="head">Chrome Extension Creator</h3>
+					<label for="contact-name" class="input-label">Extension Name*</label>
+					<label for="contact-name" class="input-label">Extension Short Name</label>
+					<label for="contact-description" class="input-label">Extension Description</label>
+					<label for="contact-version" class="input-label">Version*</label>
+					<label for="contact-url" class="input-label">URL to redirect*</label>
+					<label for="contact-icon" class="input-label" style="padding-top:40px">Icon (16x16px .png)</label>
+					<label for="contact-icon" class="input-label" style="padding-top:40px">Icon (128x128px .png)</label>
+					<input type="submit" value="Creat Extension" class="contact-btn">
+				</div>
+				<div class="col-md-7 col-sm-7 contact-right ">
+					<ul class="social">
+						<br><br>
+					</ul>
+					<div class="input-wrap ">					
+						<span class="entypo-star icon"><input type="text" name="name" id="contact-name" placeholder="Type your Chrome Extension Name"></span>
+						<span class="entypo-star icon"><input type="text" name="short_name" id="contact-name" placeholder="Type your Chrome Extension shortname (max 12 characters)"></span>
+						<span class="entypo-info-circled icon"><input type="text" name="description" id="contact-description" placeholder="Extensions description (132 characters or less, no HTML)"></span>
+						<span class="entypo-arrows-ccw icon"><input type="text" name="version" id="contact-version" placeholder="1, 1.0, 2 (digit numbers separated by dots)"></span>		
+						<span class="entypo-export icon"><input type="text" name="url" id="contact-url" placeholder="URL shows when a user launches the Extension icon. (with http://)"></span>	
+						<div class="col-md-12 col-sm-12 file-input">
+							<label for="file98">
+								<span class="btn right"><input type="file" name="file" size="50" id="file98" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">Choose File</span>
+							</label>
+							<input type="text" placeholder="No file choosen" class="file-replacer right" readonly>
+						</div>
+						<div class="col-md-12 col-sm-12 file-input">
+							<label for="file99">
+								<span class="btn right"><input type="file" name="file2" size="50" id="file99" onchange="this.parentNode.parentNode.nextElementSibling.value = this.value">Choose File</span>
+							</label>
+							<input type="text" placeholder="No file choosen" class="file-replacer right" readonly>
+						</div>
+						<span id="info1"></span>
+					</div>
+				</div>
+			</form>			
+		</div>	
+<script type="text/javascript">
+        function submitForm() {
+            console.log("submit event");
+            var fd = new FormData(document.getElementById("form1"));
+            $.ajax({
+              url: "result_extension.php",
+              type: "POST",
+              data: fd,
+              enctype: 'multipart/form-data',
+              processData: false,  // tell jQuery not to process the data
+              contentType: false   // tell jQuery not to set contentType
+            }).done(function( data ) {
+                console.log("PHP Output:");
+                console.log( data );
+				$('#info1').html(data);
+            });
+            return false;
+        }
+    </script>
+		<!-- This is a placeholder fallback for IE9 browser -->
+		<!-- For IE9 and below - placeholder fallback-->
+		<!--[if lt IE 10]>
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script src="icons/jquery.placeholder.min.js"></script>
+			<script type="text/javascript">
+				$('input, textarea').placeholder();
+			</script>
+		<![endif]-->
+	</body>
+</html>
